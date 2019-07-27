@@ -6,13 +6,12 @@
     	<mapping-file>com/arasakumar/lakshmanan/model/Publisher.hbm.xml</mapping-file>
     	<mapping-file>com/arasakumar/lakshmanan/model/Book.hbm.xml</mapping-file>
     	
-    	<class>com.arasakumar.lakshmanan.model.Publisher</class>
-    	<class>com.arasakumar.lakshmanan.model.Book</class>
-    	
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:./chapter1"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/HibernateLearning?serverTimezone=EST"/>
+            <property name="javax.persistence.jdbc.user" value="hibernate_learning"/>
+            <property name="javax.persistence.jdbc.password" value="hibernate_learning"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="create"/>
             <property name="hibernate.show_sql" value="true"/>
         </properties>
