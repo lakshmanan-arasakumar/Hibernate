@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 13, 2019 5:54:11 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.arasakumar.lakshmanan.model.Book" table="BOOK">
+        <id name="isbn" type="java.lang.String">
+            <column name="ISBN" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="publishDate" type="java.util.Date">
+            <column name="PUBLISHDATE" />
+        </property>
+        <property name="price" type="java.math.BigDecimal">
+            <column name="PRICE" />
+        </property>
+        <many-to-one name="publisher" class="com.arasakumar.lakshmanan.model.Publisher" fetch="join">
+            <column name="PUBLISHER" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
