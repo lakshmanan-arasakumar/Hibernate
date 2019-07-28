@@ -9,6 +9,10 @@ import org.hibernate.Transaction;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.arasakumar.lakshmanan.configuration.SessionManager;
+
+import static org.testng.Assert.assertEquals;
+
 public class IdentityGeneratorTest {
 	
 	@DataProvider(name = "idEntityClassNames")
@@ -27,7 +31,7 @@ public class IdentityGeneratorTest {
 	}
 	
 	@Test(dataProvider = "idEntityClassNames")
-	public void idGenerationTest(String className) {
+	public void idGenerationTest(String className) throws Exception {
         Set<Object> generatedKeys = new HashSet<Object>();
         System.out.println("Testing the entity: " + className);
         Class<?> entityType = Class.forName(className);
@@ -49,6 +53,7 @@ public class IdentityGeneratorTest {
         for (Object key : generatedKeys) {
             System.out.println(key);
         }
+        
         assertEquals(generatedKeys.size(), 40);
 		
 	}
