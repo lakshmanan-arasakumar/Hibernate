@@ -14,7 +14,7 @@ public class IncrementIdEntity {
 
 	@Id
 	@GeneratedValue(generator = "increment")
-	private Long id;
+	public Long id;
 	
-	private String field;
+	public String field;
 }

@@ -15,8 +15,8 @@ public class AutoIdEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	public Long id;
 	
-	private String field;
+	public String field;
 	
 }

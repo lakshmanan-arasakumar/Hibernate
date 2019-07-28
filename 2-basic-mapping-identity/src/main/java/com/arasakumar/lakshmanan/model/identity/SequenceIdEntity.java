@@ -11,12 +11,12 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "sequence_id")
-public class SequenceIdIdentity {
+public class SequenceIdEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Long id;
+	public Long id;
 	
-	private String field;
+	public String field;
 	
 }

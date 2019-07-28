@@ -14,7 +14,7 @@ public class UUIDIdEntity {
 
 	@Id
 	@GeneratedValue(generator = "uuid")
-	private String id;
+	public String id;
 	
-	private String field;
+	public String field;
 }

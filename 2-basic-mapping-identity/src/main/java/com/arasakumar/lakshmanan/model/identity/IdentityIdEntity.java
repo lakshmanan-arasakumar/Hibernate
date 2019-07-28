@@ -15,8 +15,8 @@ public class IdentityIdEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	public Long id;
 	
-	private String field;
+	public String field;
 	
 }

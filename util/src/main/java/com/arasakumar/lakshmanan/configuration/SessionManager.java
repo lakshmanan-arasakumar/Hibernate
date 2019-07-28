@@ -12,11 +12,8 @@ public class SessionManager {
 
 	private static SessionFactory buildSessionFactory() {
 
-		Configuration configuration = new Configuration().configure();
-		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-				.applySettings(configuration.getProperties()).build();
-
-		return configuration.buildSessionFactory(serviceRegistry);
+		return new Configuration().configure().buildSessionFactory();
+	
 	}
 	
 	public static SessionFactory getSessionFactory() {
