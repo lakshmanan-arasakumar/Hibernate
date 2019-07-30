@@ -17,7 +17,8 @@ public class IdentityGeneratorTest {
 
 	@DataProvider(name = "idEntityClassNames")
 	Object[][] getClassNames() {
-		return new Object[][] { { "com.arasakumar.lakshmanan.model.identity.AutoIdEntity", },
+		return new Object[][] { 
+				{ "com.arasakumar.lakshmanan.model.identity.AutoIdEntity", },
 				{ "com.arasakumar.lakshmanan.model.identity.HiloIdEntity", },
 				{ "com.arasakumar.lakshmanan.model.identity.IdentityIdEntity", },
 				{ "com.arasakumar.lakshmanan.model.identity.IncrementIdEntity", },
@@ -25,7 +26,8 @@ public class IdentityGeneratorTest {
 				{ "com.arasakumar.lakshmanan.model.identity.TableIdEntity", },
 				{ "com.arasakumar.lakshmanan.model.identity.UUIDIdEntity", },
 				{ "com.arasakumar.lakshmanan.model.identity.SequenceStyleIdEntity", },
-				{ "com.arasakumar.lakshmanan.model.identity.EnhancedTableIdEntity", } };
+				{ "com.arasakumar.lakshmanan.model.identity.EnhancedTableIdEntity", } 
+				};
 	}
 
 	@Test(dataProvider = "idEntityClassNames")
